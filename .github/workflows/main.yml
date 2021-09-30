@@ -1,0 +1,18 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: [self-hosted]
+    env:
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test
+        run: cat archivo.txt
